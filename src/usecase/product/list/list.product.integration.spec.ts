@@ -27,7 +27,7 @@ describe("Test list products use case", () => {
     it("should list products", async () => {
         const listProductUseCase = new ListProductUseCase(new ProductRepository());
         const createProductUseCase = new CreateProductUseCase(new ProductRepository());
-        
+
         const createdProduct1 = await createProductUseCase.execute({
             name: "Product",
             price: 10.00
@@ -43,8 +43,8 @@ describe("Test list products use case", () => {
         const output = await listProductUseCase.execute(input);
 
         expect(output).toEqual({
-            products: {
-                product: [
+            products:
+                [
                     {
                         id: createdProduct1.id,
                         name: createdProduct1.name,
@@ -56,7 +56,6 @@ describe("Test list products use case", () => {
                         price: createdProduct2.price,
                     }
                 ]
-            }
         });
     });
 });

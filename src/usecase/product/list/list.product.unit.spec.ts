@@ -29,20 +29,19 @@ describe('Unit test create product use case', () => {
 
         const output = await listProductUseCase.execute(input);
         expect(output).toEqual({
-            products: {
-                product: [
-                    {
-                        id: '123',
-                        name: 'Product',
-                        price: 10.00
-                    },
-                    {
-                        id: '321',
-                        name: 'Product2',
-                        price: 10.00
-                    }
-                ]
-            }
+            products: [
+                {
+                    id: '123',
+                    name: 'Product',
+                    price: 10.00
+                },
+                {
+                    id: '321',
+                    name: 'Product2',
+                    price: 10.00
+                }
+            ]
+
         });
     });
 

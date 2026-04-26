@@ -8,7 +8,5 @@ type Product = {
 };
 
 export interface OutputListProductDto {
-    products: {
-        product: Product[];
-    }
+    products: Product[];
 }

@@ -9,13 +9,11 @@ export class ListProductUseCase {
         const products = await this.productRepository.findAll();
 
         return {
-            products: {
-                product: products.map((product) => ({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                }))
-            }
+            products: products.map((product) => ({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+            }))
         };
     }
 }
